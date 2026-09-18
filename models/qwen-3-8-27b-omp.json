@@ -1,0 +1,18 @@
+{
+  "label": "Qwen 3.8 27B",
+  "vendor": "Alibaba",
+  "harness": "OMP",
+  "effort": "Default",
+  "order": 137,
+  "runs": {
+    "mythos-craft": {
+      "file": "mythos-craft-sky-temple.html",
+      "note": {
+        "zh": "在 OMP（启用内置技能库与已挂载的 MCP 服务器）中以 Qwen 3.8（Default）使用仓库标准中文提示词，在单次连续会话中生成。生成过程由 brainstorming 技能强制了设计评审关卡并经人工确认后才开始实现；生成后又经过多轮无头浏览器实测，并修复了生成代码中的若干真实缺陷（区块网格 y 方向步长索引计算、负坐标区块索引取整、UV 索引越界、一处结构体 bounds 数组顺序颠倒、新区块生成后邻居未重算网格面），因此不是一次成型的裸 Harness 结果，不能与其他条目直接比较。本产物仅作展示，永久排除出 Arena 盲评、投票、排行榜与达标场次计算。产物为自包含单文件 HTML（Three.js 已内联、无外部依赖）：17 种方块、程序化像素纹理加顶点 AO、柏林噪声无限区块地形、第一人称移动/跳跃/游泳、左键破坏与右键放置，以及六处神话地标（光柱圣所、石柱花园、浮空岛神殿、世界树、岩浆裂谷、水下穹顶神殿）。",
+        "en": "Single continuous session with Qwen 3.8 (Default effort) in OMP (built-in skill library and mounted MCP servers enabled), from the repository's canonical Chinese prompt. The brainstorming skill enforced a design-review gate with human approval before implementation, and the generated code was then verified through headless-browser testing, during which several real defects were fixed (chunk-grid y-stride index math, negative-coordinate chunk index rounding, an out-of-range UV index, a swapped bounds array on one structure, and missing neighbor-chunk mesh rebuild after generation). It is therefore not a one-shot bare-harness result comparable with other entries. This artifact is showcase-only and permanently excluded from Arena blind battles, votes, rankings, and qualification counts. The artifact is a self-contained single HTML file (Three.js inlined, no external dependencies) with 17 block types, procedural pixel textures with vertex ambient occlusion, infinite Perlin-noise chunked terrain, first-person movement/jump/swim, left-click break and right-click place, and six mythic landmarks (beacon sanctuary, pillar-ring garden, floating-island temple, world tree, lava rift, underwater dome temple)."
+      },
+      "contributor": "Tuiltex-0216",
+      "evaluation": "showcase"
+    }
+  }
+}
